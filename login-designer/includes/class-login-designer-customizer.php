@@ -163,7 +163,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--error-messages',
 					array(
 						'title'                => esc_html__( 'Login Error Messages', 'login-designer' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'free',
 						'login_designer_title' => esc_attr__( 'New', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -177,7 +176,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--google-recaptcha',
 					array(
 						'title'                => esc_html__( 'Google Recaptcha', 'login-designer' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'free',
 						'login_designer_title' => esc_attr__( 'New', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -193,7 +191,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 						'login_designer__section--translations',
 						array(
 							'title'                => esc_html__( 'Language Switcher', 'login-designer' ),
-							'type'                 => 'login-designer-section',
 							'login_designer_type'  => 'free',
 							'login_designer_title' => esc_attr__( 'New', 'login-designer' ),
 							'panel'                => 'login_designer',
@@ -208,7 +205,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--file-import-export',
 					array(
 						'title'                => esc_html__( 'Import & Export Settings', 'login-designer' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'free',
 						'login_designer_title' => esc_attr__( 'New', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -584,7 +580,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--background-slider',
 					array(
 						'title'                => esc_attr__( 'Background Slider', 'login-designer-pro' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'pro',
 						'login_designer_title' => esc_attr__( 'Pro', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -598,7 +593,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--form-animation',
 					array(
 						'title'                => esc_attr__( 'Form Animation', 'login-designer-pro' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'pro',
 						'login_designer_title' => esc_attr__( 'Pro', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -612,7 +606,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--rename-login-page',
 					array(
 						'title'                => esc_attr__( 'Rename Login Page', 'login-designer-pro' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'pro',
 						'login_designer_title' => esc_attr__( 'Pro', 'login-designer' ),
 						'panel'                => 'login_designer',
@@ -626,7 +619,6 @@ if ( ! class_exists( 'Login_Designer_Customizer' ) ) :
 					'login_designer__section--google-fonts',
 					array(
 						'title'                => esc_attr__( 'Google Fonts', 'login-designer-pro' ),
-						'type'                 => 'login-designer-section',
 						'login_designer_type'  => 'pro',
 						'login_designer_title' => esc_attr__( 'Pro', 'login-designer' ),
 						'panel'                => 'login_designer',

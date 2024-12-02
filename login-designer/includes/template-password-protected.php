@@ -80,7 +80,7 @@ $password = apply_filters( 'password_protected_login_password_title', __( 'Passw
 <body class="<?php echo esc_attr( $body_class ); ?>">
 	<div id="login">
 
-		<h1 id="password-protected-logo">
+		<h1 class="wp-login-logo" id="password-protected-logo">
 			<a href="<?php echo esc_url( apply_filters( 'password_protected_login_headerurl', home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( apply_filters( 'password_protected_login_headertitle', get_bloginfo( 'name' ) ) ); ?>">
 				<?php bloginfo( 'name' ); ?>
 			</a>

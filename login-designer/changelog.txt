@@ -1,3 +1,7 @@
+= 1.6.5 - Dec 02, 2024 =
+* Update - Tested upto WordPress 6.7
+* Updated - Feedback SDK Updated to latest version.
+
 = 1.6.1 05/09/2023 =
 ### Bug Fixes
 FIXED: Conflict with PHP versions equal to or less than 7.4 has been resolved.

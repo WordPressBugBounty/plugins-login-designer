@@ -14,16 +14,10 @@ if ( ! class_exists( 'WP_Customize_Section' ) ) {
 if ( ! class_exists( 'Login_Designer_Section' ) ) {
 	/**
 	 * Class Login_Designer_Section
+     *
+     * Removed the section type.
 	 */
 	class Login_Designer_Section extends WP_Customize_Section {
-		/**
-		 * Login Designer Section
-		 *
-		 * @type Login_Designer_Section
-		 *
-		 * @var string
-		 */
-		public $type = 'login-designer-section';
 
 		/**
 		 * Login Designer type.
