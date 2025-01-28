@@ -105,7 +105,7 @@ class Login_Designer_License_Control extends WP_Customize_Control {
 				<?php } ?>
 			</li>
 
-		<ul>
+		</ul>
 
 		<?php
 	}
