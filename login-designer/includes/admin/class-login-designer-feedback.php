@@ -308,7 +308,7 @@ endif;
 new Login_Designer_Feedback(
 	array(
 		'slug'       => 'login_designer',
-		'name'       => __( 'Login Designer', 'login-designer' ),
+		'name'       => 'Login Designer',
 		'time_limit' => WEEK_IN_SECONDS,
 	)
 );
