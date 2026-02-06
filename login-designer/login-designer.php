@@ -7,7 +7,7 @@
  * Author URI:      https://logindesigner.com/
  * Text Domain:     login-designer
  * Domain Path:     /languages
- * Version:         1.6.8
+ * Version:         1.6.10
  *
  * Login Designer is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'LOGIN_DESIGNER_VERSION', '1.6.8' );
+define( 'LOGIN_DESIGNER_VERSION', '1.6.10' );
 define( 'LOGIN_DESIGNER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LOGIN_DESIGNER_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LOGIN_DESIGNER_PLUGIN_FILE', __FILE__ );
@@ -36,6 +36,7 @@ define( 'LOGIN_DESIGNER_HAS_PRO', false );
 define( 'LOGIN_DESIGNER_STORE_URL', 'https://logindesigner.com/' );
 
 require_once LOGIN_DESIGNER_PLUGIN_DIR . 'includes/freemius.php';
+
 
 if ( ! class_exists( 'Login_Designer' ) ) :
 
@@ -66,6 +67,7 @@ if ( ! class_exists( 'Login_Designer' ) ) :
 		public static function instance() {
 			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Login_Designer ) ) {
 				self::$instance = new Login_Designer();
+				self::$instance->init_smtp_recommendation();
 				self::$instance->init();
 				self::$instance->asset_suffix();
 				self::$instance->includes();
@@ -97,6 +99,30 @@ if ( ! class_exists( 'Login_Designer' ) ) :
 		 */
 		public function __wakeup() {
 			_doing_it_wrong( __FUNCTION__, esc_html__( 'Something went wrong.', 'login-designer' ), '1.0' );
+		}
+
+
+		/**
+		 * Initialize SMTP recommendation
+		 * @since 1.6.8
+		 */
+		private function init_smtp_recommendation() {
+
+			if ( ! class_exists( 'Recommend_Post_SMTP_Admin_Notice' ) ) {
+				require_once LOGIN_DESIGNER_PLUGIN_DIR . 'includes/post-smtp-notice/recommend-post-smtp-admin-notice.php';
+				$recommend_smtp_admin_notice = Recommend_Post_SMTP_Admin_Notice::get_instance();
+				$recommend_smtp_admin_notice->set_plugin_info( 'fma', 'png' );
+			}
+			
+			require_once LOGIN_DESIGNER_PLUGIN_DIR . 'includes/post-smtp-notice/recommend-post-smtp-loader.php';
+			// Initialize universal Post SMTP recommendation system
+			$recommend_smtp = recommend_smtp_loader(
+				'login-designer',     // unique plugin ID
+				'login-designer',   // your plugin slug
+				true,            // show admin notice
+				'login-designer',           // parent menu
+				'gif'            // logo format
+			);
 		}
 
 		/**
